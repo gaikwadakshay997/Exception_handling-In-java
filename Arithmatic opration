@@ -1,0 +1,94 @@
+/*Create a class Number having the following features:
+Attributes
+int
+first number
+int
+second number
+result
+double
+stores result of math operations performed on a & b
+Member functions(Methods)
+Number(x, y)
+add()
+sub()
+mul()
+div()
+constructor to initialize the values of a and b
+stores the sum of a and b in result
+stores difference of a and b in result
+stores product in result
+stores a divided by b in result
+Test to see if b is 0 and throw an appropriate exception since division by zero is undefined.
+Display a menu to the user to perform the above four arithmetic operations.*/
+
+
+package exception;
+import java.util.Scanner;
+public class Assgn2 
+{
+	int f_num;
+	int s_num;
+	double result;
+	
+	Assgn2(int x, int y)
+	
+	{
+		f_num = x;
+		s_num = y;
+	}
+		public void add()
+		{
+			result = f_num+s_num;
+			System.out.println(result);
+			
+		}
+		
+		public void sub()
+		{
+			result = f_num-s_num;
+			System.out.println(result);
+			
+		}
+		
+		public void mul()
+		{
+			result = f_num*s_num;
+			System.out.println(result);
+			
+		}
+		public void div()throws Exception
+		{
+			try
+			{
+				if(s_num==0)
+				{
+					throw new Exception("inf");
+				}
+				else
+				{
+					result = f_num/s_num;
+					System.out.println(result);
+				}
+				
+				
+			}
+			catch (Exception e)
+			{
+				System.out.println(e);
+				
+			}
+		}
+		public static void main(String[] args)throws Exception
+		{
+			Assgn2 a = new Assgn2(10,0);
+			a.add();
+			a.sub();
+			a.mul();
+			a.div();
+			
+		}
+	}
+		
+			
+	
+		
